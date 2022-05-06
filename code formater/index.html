@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <span>
+        private void formula() //rovnice ktere nerozumim
+        {
+            var c1 = -g * (2 * m1 + m2) * Math.Sin(a1); //čitatel
+            var c2 = -m2 * g * Math.Sin(a1 - 2 * a2);
+            var c3 = -2 * Math.Sin(a1 - a2) * m2;
+            var c4 = a2_v * a2_v * r2 + a1_v * a1_v * r1 * Math.Cos(a1 - a2);
+            var j = r1 *(2 * m1 + m2 - m2 * Math.Cos(2 * a1 - 2 * a2)); //jmenovatel
+            a1_a = (c1 + c2 + c3 * c4) / j;
+
+            c1 = 2 * Math.Sin(a1 - a2);
+            c2 = a1_v * a1_v * r1 * (m1 + m2);
+            c3 = g * (m1 + m2) * Math.Cos(a1);
+            c4 = a2_v * a2_v * r2 * m2 * Math.Cos(a1 - a2);
+            j = r2 * (2 * m1 + m2 - m2 * Math.Cos(2 * a1 - 2 * a2));
+            a2_a = (c1 * (c2+c3+c4) ) / j;
+        }
+    </span> 
+
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* 
+{
+  margin: 0;
+  padding: 0; 
+}
+
+  
+#menu 
+{
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#menu span 
+{
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #090909;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#menu #line1 
+{
+  top: 0px;
+  transform-origin: center center;
+}
+
+#menu #line2
+{
+  top: 18px;
+  transform-origin: center center;
+}
+
+#menu #line3 
+{
+  top: 36px;
+  transform-origin: center center;
+}
+
+#menu.toggle #line1 
+{
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+#menu.toggle #line2 
+{
+  width: 0%;
+  opacity: 0;
+}
+
+#menu.toggle #line3 
+{
+  transform: rotate(-45deg);
+  top: 18px;
+}
+
+#dark
+{
+  position: relative;
+  margin: 50px auto;
+  cursor: pointer;
+  text-align: center;
+}
+
+#dark .icon
+{
+  font-size: 65px;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+}
+
+#icon_dark.toggle
+{
+  animation-name: unscale;
+  animation-duration: 0.3s;
+}
+
+#icon_light.toggle
+{
+  animation-name: unscale;
+  animation-duration: 0.3s;
+}
+
+@keyframes scale {
+  from {scale: 0;}
+  to {scale: 100;}
+}
+
+@keyframes unscale {
+  from {scale: 100px;}
+  to {scale: 0px;}
+}

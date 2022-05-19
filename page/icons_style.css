@@ -7,51 +7,55 @@
   
 #menu 
 {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
+  background-color: #D2EA9B;
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  right: 20px;
+  left: auto;
+  top: 20px;
   transform: rotate(0deg);
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  border-radius: 20%;
 }
 
 #menu span 
 {
   display: block;
   position: absolute;
-  height: 9px;
-  width: 100%;
+  height: 7px;
+  width: 70%;
   background: #090909;
   border-radius: 9px;
   opacity: 1;
-  left: 0;
+  left: 10px;
   transform: rotate(0deg);
   transition: .25s ease-in-out;
 }
 
 #menu #line1 
 {
-  top: 0px;
+  top: 14px;
   transform-origin: center center;
 }
 
 #menu #line2
 {
-  top: 18px;
+  top: 30px;
   transform-origin: center center;
 }
 
 #menu #line3 
 {
-  top: 36px;
+  top: 46px;
   transform-origin: center center;
 }
 
 #menu.toggle #line1 
 {
   transform: rotate(45deg);
-  top: 18px;
+  top: 30px;
 }
 
 #menu.toggle #line2 
@@ -63,42 +67,6 @@
 #menu.toggle #line3 
 {
   transform: rotate(-45deg);
-  top: 18px;
+  top: 30px;
 }
 
-#dark
-{
-  position: relative;
-  margin: 50px auto;
-  cursor: pointer;
-  text-align: center;
-}
-
-#dark .icon
-{
-  font-size: 65px;
-  transition: 0.3s ease-in-out;
-  position: absolute;
-}
-
-#icon_dark.toggle
-{
-  animation-name: unscale;
-  animation-duration: 0.3s;
-}
-
-#icon_light.toggle
-{
-  animation-name: unscale;
-  animation-duration: 0.3s;
-}
-
-@keyframes scale {
-  from {scale: 0;}
-  to {scale: 100;}
-}
-
-@keyframes unscale {
-  from {scale: 100px;}
-  to {scale: 0px;}
-}

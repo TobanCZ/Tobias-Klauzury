@@ -173,6 +173,96 @@ nav #text a:active
     width: 80%;
 }
 
+#favourite 
+{
+    margin-top: 100px;
+}
+
+#favourite #container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:400px;
+}
+
+#favourite #container .box
+{
+    width: 200px;
+    height: 400px;
+    background-color: #858585;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#favourite #container .box-active
+{
+    width: 250px;
+    height: 450px;
+}
+
+#favourite #circles
+{
+    padding-top: 70px;
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#favourite .dot
+{
+    width: 10px;
+    height: 10px;
+    background-color: #b7b7b7;
+    border-radius: 50%;
+}
+
+#favourite .dot-active
+{
+    background-color: #797979;
+}
+
+#favourite .info
+{
+    display: flex;
+    z-index: 10;
+    position:absolute;
+    top: 0;
+    background-color: #030303;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.info-hide
+{
+    animation-name: info_hide;
+    animation-duration: 0.3s;
+    opacity: 0;
+}
+
+.info-active
+{
+    animation-name: info_show;
+    animation-duration: 0.3s;
+    opacity: 0.8;
+}
+
+#info:hover
+{
+    
+}
+
+@keyframes info_show {
+  from {opacity: 0;}
+  to {opacity: 0.8;}
+}
+
+@keyframes info_hide {
+    from {opacity: 0.8;}
+    to {opacity: 0;}
+  }
+
 #projects
 {
     margin-top: 200px;
@@ -187,12 +277,6 @@ nav #text a:active
     display: flex;
     margin-top: 50px;
     gap: 40px;
-}
-
-#projects h1
-{
-    font-family: 'Varela Round', sans-serif;
-    margin-left: 150px;
 }
 
 .project

@@ -1,3 +1,16 @@
+function nav_scroll()
+{
+    const el = document.getElementById("nav");
+    if(document.documentElement.scrollTop > 170 && el.classList.contains("nav-active") == false)
+    {
+        el.classList.add("nav-active");
+    }
+    else if(document.documentElement.scrollTop < 170 && el.classList.contains("nav-active"))
+    {
+        el.classList.remove("nav-active");
+    }
+}
+
 function left()
 {
     let element  = document.getElementsByClassName("project");

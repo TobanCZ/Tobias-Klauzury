@@ -11,7 +11,6 @@
 body
 {
     background-color: #F2F2F2;
-    height: 20000PX;
 }
 
 nav
@@ -22,6 +21,25 @@ nav
     height: fit-content;
     display: flex;
     justify-content: space-between;
+}
+
+.nav-active
+{
+    position: fixed;
+    background-color: black;
+    animation-name: nav_show;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+    align-items: center;
+}
+
+@keyframes nav_show 
+{
+    0%{transform: scaleY(0);}
+    50% {transform: scaleY(1);}
+    75% {transform: scaleY(0.8);}
+    100% {transform: scaleY(1);}
 }
 
 nav img
@@ -173,6 +191,32 @@ nav #text a:active
     width: 80%;
 }
 
+#hobbies
+{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+#hobby
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hobby img
+{
+    width: 200px;
+}
+
+#hobby p
+{
+    font-family: 'Varela Round', sans-serif;
+    margin: 10px;
+}
+
 #favourite 
 {
     margin-top: 100px;
@@ -253,15 +297,17 @@ nav #text a:active
     
 }
 
-@keyframes info_show {
+@keyframes info_show 
+{
   from {opacity: 0;}
   to {opacity: 0.8;}
 }
 
-@keyframes info_hide {
+@keyframes info_hide 
+{
     from {opacity: 0.8;}
     to {opacity: 0;}
-  }
+}
 
 #projects
 {
@@ -328,4 +374,58 @@ nav #text a:active
 #projects span
 {
     font-size: 35px;
+}
+
+#idols
+{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+#idol
+{
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 350px;
+    background: rgb(11,95,239);
+    background: linear-gradient(90deg, rgba(11,95,239,1) 0%, rgba(202,65,242,1) 100%);
+}
+
+#idol h1
+{
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 10px;
+}
+
+#idol p
+{
+    font-family: 'Varela Round', sans-serif;
+}
+
+footer
+{
+    margin-top: 200px;
+    background-color: #030303;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+}
+
+footer h1
+{
+    font-family: 'Varela Round', sans-serif;
+    margin: 50px;
+}
+
+footer p
+{
+    font-family: 'Varela Round', sans-serif;
 }

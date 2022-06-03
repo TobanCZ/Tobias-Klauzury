@@ -193,7 +193,7 @@ nav #text a:active
 
 #hobbies
 {
-    margin-top: 200px;
+    margin-top: 175px;
     display: flex;
     justify-content: center;
     gap: 200px;
@@ -232,8 +232,7 @@ nav #text a:active
 
 #favourite #container .box
 {
-    width: 200px;
-    height: 400px;
+    width: 250px;
     background-color: #858585;
     position: absolute;
     transition: 0.3s;
@@ -241,8 +240,7 @@ nav #text a:active
 
 #favourite #container .box-active
 {
-    width: 250px;
-    height: 450px;
+    width: 300px
 }
 
 #favourite #circles
@@ -311,7 +309,7 @@ nav #text a:active
 
 #projects
 {
-    margin-top: 200px;
+    margin-top: 75px;
     width: 100%;
 }
 

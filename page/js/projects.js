@@ -1,4 +1,4 @@
-function nav_scroll()
+function body_scroll()
 {
     const el = document.getElementById("nav");
     if(document.documentElement.scrollTop > 170 && el.classList.contains("nav-active") == false)
@@ -9,6 +9,8 @@ function nav_scroll()
     {
         el.classList.remove("nav-active");
     }
+
+    
 }
 
 function left()
@@ -115,7 +117,7 @@ function hide_info(info)
     }
 }
 
-function dot_click(num)
+function dot_click_fv(num)
 {
     let el  = document.getElementsByClassName("box");
     let dots = document.getElementsByClassName("dot");

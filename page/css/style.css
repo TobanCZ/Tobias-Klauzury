@@ -101,7 +101,7 @@ nav #text a:active
     margin-left: 60px;
 }
 
-#home img
+#home #foto
 {
     border: #c6c6c6 solid 2px;
     border-radius: 20px;
@@ -138,6 +138,28 @@ nav #text a:active
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 120px;
+}
+
+#home #icons
+{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: row-reverse;
+    bottom: 5px;
+    right: 5px;
+}
+
+#home #icons img
+{
+    width: 50px;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    height: fit-content;
+
 }
 
 #home button:hover
@@ -193,9 +215,10 @@ nav #text a:active
 
 #hobbies
 {
-    margin-top: 175px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
+    align-items: baseline;
     gap: 200px;
 }
 
@@ -219,7 +242,7 @@ nav #text a:active
 
 #favourite 
 {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 #favourite #container
@@ -251,12 +274,17 @@ nav #text a:active
     gap: 10px;
 }
 
-#favourite .dot
+#favourite .dot_fv
 {
     width: 10px;
     height: 10px;
     background-color: #b7b7b7;
     border-radius: 50%;
+}
+
+#favourite .dot_fv:hover
+{
+    cursor: pointer;
 }
 
 #favourite .dot-active
@@ -343,9 +371,35 @@ nav #text a:active
     opacity: 100%;
 }
 
+#projects #circles
+{
+    padding-top: 220px;
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#projects .dot_pj
+{
+    width: 10px;
+    height: 10px;
+    background-color: #b7b7b7;
+    border-radius: 50%;
+}
+
+#projects .dot_pj:hover
+{
+    cursor: pointer;
+}
+
+#projects .dot-active
+{
+    background-color: #797979;
+}
+
 #projects #buttons
 {
-    margin-top: 250px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -417,13 +471,54 @@ footer
     padding: 10px;
 }
 
+footer #icons
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1);
+    height: 75px;
+    width: 100%;
+    margin: 20px;
+}
+
+footer #icons a
+{
+    transition: 0.5s;
+}
+
+footer #icons a:hover
+{
+   transform: scale(1.5);
+}
+
+footer #name img
+{
+    width: 40px;
+}
+
+footer #icons img
+{
+    width: 40px;
+    height: auto;
+}
+
 footer h1
 {
     font-family: 'Varela Round', sans-serif;
-    margin: 50px;
 }
 
 footer p
 {
     font-family: 'Varela Round', sans-serif;
+}
+
+footer #name
+{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

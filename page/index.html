@@ -29,12 +29,18 @@
 
     <div id="background">
         <div id="home">
-            <img src="images/Foto.jpg" alt="">
+            <img id="foto" src="images/Foto.jpg" alt="">
             <div id="text">
                 <h2>Jmenuji se</h2>
                 <h1>Tobiáš Ondra</h1>
                 <h2>Junior Backend Developer</h2>
                 <Button>Moje Projekty</Button>
+            </div>
+            <div id="icons">
+                <a href="mailto:tobiasondra2@gmail.com" target="_blank"><img src="images/mail_icon.png" alt=""></a>
+                <a href="https://github.com/TobanCZ" target="_blank"><img src="images/github_icon.png" alt=""></a>
+                <a href="https://www.instagram.com/tobi_ondra/" target="_blank"><img src="images/instagram_icon.png" alt=""></a>
+                <a href="https://steamcommunity.com/profiles/76561198283610034/" target="_blank"><img src="images/steam_icon.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -67,29 +73,49 @@
         </div>
 
         <div id="hobby">
-            <img src="images/programmer_icon.jpg" alt="">
+            <img src="images/programmer_icon.png" alt="">
             <p>Programování</p>
         </div>
     </div>
 
     <div id="favourite">
         <div id="container">
-            <div class="box"style="transform:translateX(-130%);" onclick="dot_click_fv(0)" onmouseover="show_info('info1')" onmouseleave="hide_info('info1')"><img src="images/game.jpg" alt="game"><div id="info1" class="info-hide info"><h1>dawdadw</h1></div></div>
-            <div class="box box-active" style="transform:translateX(0%) ;" onclick="dot_click_fv(1)" onmouseover="show_info('info2')" onmouseleave="hide_info('info2')"><img src="images/game.jpg" alt="game"><div id="info2" class="info-hide info"><h1>dawdadw</h1></div></div>
-            <div class="box" style="transform:translateX(130%) ;" onclick="dot_click_fv(2)" onmouseover="show_info('info3')" onmouseleave="hide_info('info3')"><img src="images/game.jpg" alt="game"><div id="info3" class="info-hide info"><h1>dawdadw</h1></div></div>
-        </div>
+            <div class="box" style="transform:translateX(-130%);" onclick="dot_click_fv(0)" onmouseover="show_info('info1')" onmouseleave="hide_info('info1')">
+                <img src="images/game.jpg" alt="game">
+                    <div id="info1" class="info-hide info">
+                        <h1>dawdadw</h1>
+                    </div>
+                </div>
+            <div class="box box-active" style="transform:translateX(0%) ;" onclick="dot_click_fv(1)" onmouseover="show_info('info2')" onmouseleave="hide_info('info2')">
+                <img src="images/game.jpg" alt="game">
+                    <div id="info2" class="info-hide info">
+                        <h1>dawdadw</h1>
+                    </div>
+                </div>
+            <div class="box" style="transform:translateX(130%) ;" onclick="dot_click_fv(2)" onmouseover="show_info('info3')" onmouseleave="hide_info('info3')">
+                <img src="images/game.jpg" alt="game">
+                    <div id="info3" class="info-hide info">
+                        <h1>dawdadw</h1>
+                    </div>
+                </div>
+            </div>
         <div id="circles">
-            <span class="dot" onclick="dot_click(0)"></span>
-            <span class="dot dot-active" onclick="dot_click(1)"></span>
-            <span class="dot" onclick="dot_click(2)"></span>
+            <span class="dot_fv" onclick="dot_click_fv(0)"></span>
+            <span class="dot_fv dot-active" onclick="dot_click_fv(1)"></span>
+            <span class="dot_fv" onclick="dot_click_fv(2)"></span>
         </div>
     </div>
 
     <div id="projects">
         <div id="container">
-            <div class="project" style="transform:translateX(-110%) ;">idk</div>
-            <div class="project project-active" style="transform:translateX(0%) ;">idk</div>
-            <div class="project" style="transform:translateX(110%) ;">idk</div>
+            <div class="project" style="transform:translateX(-110%) ;" onclick="dot_click_pj(0)">idk</div>
+            <div class="project project-active" style="transform:translateX(0%) ;" onclick="dot_click_pj(1)">idk</div>
+            <div class="project" style="transform:translateX(110%) ; "onclick="dot_click_pj(2)">idk</div>
+        </div>
+        <div id="circles">
+            <span class="dot_pj" onclick="dot_click_pj(0)"></span>
+            <span class="dot_pj dot-active" onclick="dot_click_pj(1)"></span>
+            <span class="dot_pj" onclick="dot_click_pj(2)"></span>
         </div>
         <div id="buttons">
             <button onclick="left()"><span class="material-icons">arrow_back</span></button>
@@ -104,7 +130,16 @@
     </div>
 
     <footer>
-        <h1>Tobias Ondra</h1>
+        <div id="name">
+            <img src="images/Logo.png" alt="">
+            <h1> Tobias Ondra</h1>
+        </div>
+        <div id="icons">
+            <a href="mailto:tobiasondra2@gmail.com" target="_blank"><img src="images/mail_icon.png" alt=""></a>
+            <a href="https://github.com/TobanCZ" target="_blank"><img src="images/github_icon.png" alt=""></a>
+            <a href="https://www.instagram.com/tobi_ondra/" target="_blank"><img src="images/instagram_icon.png" alt=""></a>
+            <a href="https://steamcommunity.com/profiles/76561198283610034/" target="_blank"><img src="images/steam_icon.png" alt=""></a>
+        </div>
         <p>Create by Tobiáš Ondra 2022 ©</p>
     </footer>
     <!--

@@ -1,3 +1,4 @@
+//* ------------------ show nav when scroll ------------------
 function body_scroll()
 {
     const el = document.getElementById("nav");
@@ -13,85 +14,7 @@ function body_scroll()
     
 }
 
-function left()
-{
-    let element  = document.getElementsByClassName("project");
-    let onEnd = true;
-
-    for(let i = 0; i < element .length; i++)
-    {
-        if(element[i].style.transform == "translateX(-110%)")
-        {
-            onEnd = false;
-        }
-    }
-
-    if(onEnd == false)
-    {
-        for(let i = 0; i < element .length; i++)
-        {
-            if(element[i].style.transform == "translateX(-110%)")
-            {
-                element[i].style.transform = "translateX(0%)";
-                element[i].classList.add("project-active");
-            }
-            else if(element[i].style.transform == "translateX(0%)")
-            {
-                element[i].style.transform = "translateX(110%)";
-                element[i].classList.remove("project-active");
-            }
-            else
-            {
-                let num = element[i].style.transform;
-                num = num.replace("translateX(","");
-                num = num.replace("%)","");
-                num = parseInt(num);
-                num = num + 100;
-                element[i].style.transform = "translateX("+ num +"%)";
-            }
-        }
-    }
-}
-
-function right()
-{
-    let element  = document.getElementsByClassName("project");
-    let onEnd = true;
-
-    for(let i = 0; i < element .length; i++)
-    {
-        if(element[i].style.transform == "translateX(110%)")
-        {
-            onEnd = false;
-        }
-    }
-
-    if(onEnd == false)
-    {
-        for(let i = 0; i < element .length; i++)
-        {
-            if(element[i].style.transform == "translateX(110%)")
-            {
-                element[i].style.transform = "translateX(0%)";
-                element[i].classList.add("project-active");
-            }
-            else if(element[i].style.transform == "translateX(0%)")
-            {
-                element[i].style.transform = "translateX(-110%)";
-                element[i].classList.remove("project-active");
-            }
-            else
-            {
-                let num = element[i].style.transform;
-                num = num.replace("translateX(","");
-                num = num.replace("%)","");
-                num = parseInt(num);
-                num = num - 100;
-                element[i].style.transform = "translateX("+ num +"%)";
-            }
-        }
-    }
-}
+//* ------------------ favourite show and hide info ------------------
 
 function show_info(info)
 {
@@ -117,10 +40,17 @@ function hide_info(info)
     }
 }
 
+
+//* ------------------ favourite element swiper ------------------
+
+let fv_count = 1;
+
 function dot_click_fv(num)
 {
+    fv_count = num;
+
     let el  = document.getElementsByClassName("box");
-    let dots = document.getElementsByClassName("dot");
+    let dots = document.getElementsByClassName("dot_fv");
 
     for(let i = 0; i < dots.length; i++)
     {
@@ -165,3 +95,138 @@ function dot_click_fv(num)
         }
     }
 }
+
+//* ------------------ touch swipe for mobile(favourite) ------------------
+let fv_startX = 0;
+let fv_pressed = false;
+const fv = document.querySelector('#favourite'); //get el
+const cont = fv.querySelector('#container'); //get child of el
+
+cont.addEventListener("touchstart",function(e)  //event for touch start
+{ 
+    fv_startX = e.changedTouches[0].clientX
+    fv_pressed = true;
+})
+
+window.addEventListener("touchend", function(e) //event for touch end (pro okno kdyby nahdou vyjel z elementu)
+{
+    if(fv_pressed)
+    {
+        if(fv_startX > e.changedTouches[0].clientX && fv_count < cont.childElementCount-1)  //swipe right
+        {
+            fv_count += 1;
+            dot_click_fv(fv_count);
+        }
+        else if(fv_startX < e.changedTouches[0].clientX && fv_count > 0)   //swipe left
+        {
+            fv_count -= 1;
+            dot_click_fv(fv_count);
+        }
+        fv_pressed = false;
+    }
+})
+
+//* ------------------ project element swiper ------------------
+let pj_count = 1;
+function dot_click_pj(num)
+{
+    pj_count = num
+
+    let el  = document.getElementsByClassName("project");
+    let dots = document.getElementsByClassName("dot_pj");
+
+    for(let i = 0; i < dots.length; i++)
+    {
+        if(num == i)
+        {
+            dots[i].classList.add("dot-active");
+        }
+        else if(dots[i].classList.contains("dot-active"))
+        {
+            dots[i].classList.remove("dot-active");
+        }
+    }
+
+    for(let i = 0; i < el.length; i++)
+    {
+        if(num == i)
+        {
+            el[i].classList.add("project-active");
+        }
+        else if(el[i].classList.contains("project-active"))
+        {
+            el[i].classList.remove("project-active");
+        }
+
+        if(num == i)
+        {
+            el[i].style.transform = "translateX(0%)";
+        }
+        else
+        {
+            var count = i - num;
+            if(count > 0)
+            {
+                count = count*110
+            }
+            else
+            {
+                count = count*110
+            }
+
+            el[i].style.transform = "translateX("+count+"%)";
+        }
+    }
+}
+
+function left()
+{
+    if(pj_count > 0)
+    {
+        pj_count -= 1;
+            dot_click_pj(pj_count);
+    }
+}
+
+function right()
+{
+    const projects = document.querySelector('#projects'); //get el
+    const pj = projects.querySelector('#container'); //get child of el
+
+    if(pj_count < pj.childElementCount-1)
+    {
+        pj_count += 1;
+        dot_click_pj(pj_count);
+    }
+}
+
+//* ------------------ touch swipe for mobile(project) ------------------
+let pj_startX = 0;
+let pj_pressed = false;
+const projects = document.querySelector('#projects'); //get el
+const pj = projects.querySelector('#container'); //get child of el
+
+pj.addEventListener("touchstart",function(e)  //event for touch start
+{ 
+    pj_startX = e.changedTouches[0].clientX
+    pj_pressed = true;
+})
+
+window.addEventListener("touchend", function(e) //event for touch end (pro okno kdyby nahdou vyjel z elementu)
+{
+    if(pj_pressed)
+    {
+        if(pj_startX > e.changedTouches[0].clientX && pj_count < pj.childElementCount-1)  //swipe right
+        {
+            pj_count += 1;
+            dot_click_pj(pj_count);
+        }
+        else if(pj_startX < e.changedTouches[0].clientX && pj_count > 0)   //swipe left
+        {
+            pj_count -= 1;
+            dot_click_pj(pj_count);
+        }
+        pj_pressed = false;
+    }
+})
+

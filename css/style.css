@@ -172,7 +172,7 @@ nav #text a:active
     cursor: pointer;
 }
 
-@media screen and (max-width: 700px) 
+@media screen and (max-width: 800px) 
 {
     #nav
     {

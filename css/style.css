@@ -8,6 +8,11 @@
     overflow-x: hidden;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body
 {
     background-color: #F2F2F2;

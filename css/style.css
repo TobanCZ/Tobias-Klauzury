@@ -312,6 +312,7 @@ nav #text a:active
 #favourite 
 {
     margin-top: 150px;
+    max-width: 100%;
 }
 
 #favourite #container
@@ -407,7 +408,7 @@ nav #text a:active
 #projects
 {
     margin-top: 75px;
-    width: 100%;
+    max-width: 100%;
 }
 
 #projects #container

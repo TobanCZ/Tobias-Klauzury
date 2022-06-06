@@ -296,6 +296,7 @@ nav #text a:active
 
 #hobbies
 {
+    position: relative;
     margin-top: 150px;
     display: flex;
     justify-content: center;
@@ -323,6 +324,8 @@ nav #text a:active
 
 #favourite 
 {
+    position: relative;
+    overflow: hidden;
     margin-top: 150px;
     max-width: 100%;
 }
@@ -332,7 +335,7 @@ nav #text a:active
     display: flex;
     justify-content: center;
     align-items: center;
-    height:400px;
+    height:500px;
 }
 
 #favourite #container .box
@@ -341,6 +344,7 @@ nav #text a:active
     background-color: #858585;
     position: absolute;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 #favourite #container .box-active
@@ -350,7 +354,7 @@ nav #text a:active
 
 #favourite #circles
 {
-    padding-top: 70px;
+    padding-top: 10px;
     display:flex;
     justify-content: center;
     gap: 10px;
@@ -421,6 +425,8 @@ nav #text a:active
 {
     margin-top: 75px;
     max-width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 #projects #container

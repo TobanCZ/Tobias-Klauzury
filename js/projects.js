@@ -220,7 +220,7 @@ function left()
     if(pj_count > 0)
     {
         pj_count -= 1;
-            dot_click_pj(pj_count);
+            dot_click_pj(pj_count,"click");
     }
 }
 
@@ -232,7 +232,7 @@ function right()
     if(pj_count < pj.childElementCount-1)
     {
         pj_count += 1;
-        dot_click_pj(pj_count);
+        dot_click_pj(pj_count,"click");
     }
 }
 
@@ -255,12 +255,12 @@ window.addEventListener("touchend", function(e) //event for touch end (pro okno 
         if(pj_startX > e.changedTouches[0].clientX && pj_startX + 100 > e.changedTouches[0].clientX && pj_count < pj.childElementCount-1)  //swipe right
         {
             pj_count += 1;
-            dot_click_pj(pj_count);
+            dot_click_pj(pj_count,"swipe");
         }
         else if(pj_startX < e.changedTouches[0].clientX && pj_startX - 100 < e.changedTouches[0].clientX && pj_count > 0)   //swipe left
         {
             pj_count -= 1;
-            dot_click_pj(pj_count);
+            dot_click_pj(pj_count,"swipe");
         }
         pj_pressed = false;
     }

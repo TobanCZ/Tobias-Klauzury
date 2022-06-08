@@ -496,12 +496,11 @@ body
 
 #projects #container
 {
-    padding-top: 200px;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 50px;
     gap: 40px;
+    height: 500px;
 }
 
 .project
@@ -526,7 +525,7 @@ body
 
 #projects #circles
 {
-    padding-top: 220px;
+    
     display:flex;
     justify-content: center;
     gap: 10px;
@@ -790,6 +789,30 @@ footer #name
     #about .skill
     {
         height: 100%;
+    }
+
+    
+    #projects
+    {
+        height: 140vw;
+        
+    }
+
+    #projects #container
+    {
+        height: 130vw;
+    }
+
+    .project
+    {
+        width: 80vw;
+        min-width: 0px;
+        height: 80%;
+    }
+
+    #projects #buttons
+    {
+        display: none;
     }
 }
 

@@ -24,15 +24,12 @@ document.getElementById("menu").addEventListener("click", function(){
 	{
 		this.classList.toggle("toggle") 			//přepínání tříd u hamurgr menu
 
-		if(document.getElementById("navigation").className == "")		//přepínání navigace
-		{
-			document.getElementById("navigation").classList.toggle("show")
-		}		
-		else
-		{
-			document.getElementById("navigation").classList.toggle("show")
-			document.getElementById("navigation").classList.toggle("hide")
-		}	
+
+			document.getElementById("navigation").classList.toggle("navigation-active")
+				
+
+
+			
 
 		isPressd = true;
 		timer = setInterval(Timer, 500);

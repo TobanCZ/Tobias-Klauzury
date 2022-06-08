@@ -142,12 +142,12 @@ window.addEventListener("touchend", function(e) //event for touch end (pro okno 
 {
     if(fv_pressed)
     {
-        if(fv_startX > e.changedTouches[0].clientX && fv_startX + 100 > e.changedTouches[0].clientX && fv_count < cont.childElementCount-1)  //swipe right
+        if(fv_startX > e.changedTouches[0].clientX && fv_startX - 100 > e.changedTouches[0].clientX && fv_count < cont.childElementCount-1)  //swipe right
         {
             fv_count += 1;
             dot_click_fv(fv_count,"swipe");
         }
-        else if(fv_startX < e.changedTouches[0].clientX && fv_startX - 100 < e.changedTouches[0].clientX && fv_count > 0)   //swipe left
+        else if(fv_startX < e.changedTouches[0].clientX && fv_startX + 100 < e.changedTouches[0].clientX && fv_count > 0)   //swipe left
         {
             fv_count -= 1;
             dot_click_fv(fv_count,"swipe");
@@ -252,12 +252,12 @@ window.addEventListener("touchend", function(e) //event for touch end (pro okno 
 {
     if(pj_pressed)
     {
-        if(pj_startX > e.changedTouches[0].clientX && pj_startX + 100 > e.changedTouches[0].clientX && pj_count < pj.childElementCount-1)  //swipe right
+        if(pj_startX > e.changedTouches[0].clientX && pj_startX - 100 > e.changedTouches[0].clientX && pj_count < pj.childElementCount-1)  //swipe right
         {
             pj_count += 1;
             dot_click_pj(pj_count,"swipe");
         }
-        else if(pj_startX < e.changedTouches[0].clientX && pj_startX - 100 < e.changedTouches[0].clientX && pj_count > 0)   //swipe left
+        else if(pj_startX < e.changedTouches[0].clientX && pj_startX + 100 < e.changedTouches[0].clientX && pj_count > 0)   //swipe left
         {
             pj_count -= 1;
             dot_click_pj(pj_count,"swipe");

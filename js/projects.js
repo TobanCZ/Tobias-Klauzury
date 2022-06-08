@@ -70,8 +70,13 @@ function hide_info(info)
 
 let fv_count = 1;
 
-function dot_click_fv(num)
+function dot_click_fv(num,type)
 {
+    if(document.body.clientWidth < 800 && type != "swipe")
+    {
+        return;
+    }
+
     fv_count = num;
 
     let el  = document.getElementsByClassName("box");
@@ -140,12 +145,12 @@ window.addEventListener("touchend", function(e) //event for touch end (pro okno 
         if(fv_startX > e.changedTouches[0].clientX && fv_count < cont.childElementCount-1)  //swipe right
         {
             fv_count += 1;
-            dot_click_fv(fv_count);
+            dot_click_fv(fv_count,"swipe");
         }
         else if(fv_startX < e.changedTouches[0].clientX && fv_count > 0)   //swipe left
         {
             fv_count -= 1;
-            dot_click_fv(fv_count);
+            dot_click_fv(fv_count,"swipe");
         }
         fv_pressed = false;
     }

@@ -19,22 +19,19 @@ function body_scroll()
 var isPressd = false;
 var timer ;
 
-document.getElementById("menu").addEventListener("click", function(){ 
+function mobile_nav_click()
+{
+
 	if(isPressd == false)
 	{
-		this.classList.toggle("toggle") 			//přepínání tříd u hamurgr menu
-
-
-			document.getElementById("navigation").classList.toggle("navigation-active")
-				
-
-
-			
+		document.getElementById("menu").classList.toggle("toggle") 			//přepínání tříd u hamurgr menu
+		document.getElementById("navigation").classList.toggle("navigation-active")
 
 		isPressd = true;
 		timer = setInterval(Timer, 500);
 	}
-}) 
+} 
+
 
 function Timer()
 {

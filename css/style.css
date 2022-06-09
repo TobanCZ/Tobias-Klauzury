@@ -19,7 +19,7 @@ body
     max-width: 100%;
 }
 
-#nav
+nav
 {
     z-index: 1;
     position: absolute;
@@ -39,6 +39,7 @@ body
     transform-origin: top;
     align-items: center;
 }
+
 
 @keyframes nav_show 
 {
@@ -556,7 +557,7 @@ body
     display:inline;
 }
 
-#text
+.project #text
 {
     height: 190px;
     overflow-y: hidden;

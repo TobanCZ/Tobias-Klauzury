@@ -243,8 +243,8 @@ body
 {
     border: #c6c6c6 solid 2px;
     border-radius: 20px;
-    min-width: 400px;
-    min-height: 400px;
+    max-width: 400px;
+    max-height: 400px;
     margin: 20px;
 }
 
@@ -543,33 +543,34 @@ body
 
 .project-active
 {
-    height: fit-content;
+    height: auto;
     width: 600px;
     opacity: 100%;
 }
 
-.project > h1{
+.project > #text{
     display: none;
 }
 
-.project-active > h1{
+.project-active > #text{
     display:inline;
 }
 
-.project > p{
-    display: none;
+#text
+{
+    height: 190px;
+    overflow-y: hidden;
+    transform-origin: top;
+    transform: scaleY(1);
+    animation-name: project_text_show;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
 }
 
-.project-active > p{
-    display:inline;
-}
-
-.project > a{
-    display: none;
-}
-
-.project-active > a{
-    display:inline;
+@keyframes project_text_show
+{
+    from {height: 0px;}
+    to {height: 190px;}
 }
 
 #projects #circles

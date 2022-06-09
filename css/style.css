@@ -470,11 +470,6 @@ nav
     opacity: 0.8;
 }
 
-#info:hover
-{
-    
-}
-
 @keyframes info_show 
 {
   from {opacity: 0;}

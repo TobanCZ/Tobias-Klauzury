@@ -65,6 +65,22 @@ function hide_info(info)
     }
 }
 
+function toggle_info(info)
+{
+    let el = document.getElementById(info);
+
+    if(el.classList.contains("info-hide") == false)
+    {
+        el.classList.remove("info-active");
+        el.classList.add("info-hide");
+    }
+    else
+    {
+        el.classList.remove("info-hide");
+        el.classList.add("info-active");
+    }
+}
+
 
 //* ------------------ favourite element swiper ------------------
 

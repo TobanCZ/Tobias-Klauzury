@@ -15,7 +15,7 @@ html, body {
 
 body
 {
-    background-color: #F2F2F2;
+    background-color: white;
     max-width: 100%;
 }
 
@@ -312,13 +312,15 @@ nav
 
 #about
 {
-    margin-top: 200px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     font-family: 'Varela Round', sans-serif;
+    background-color: #F2F2F2;
 }
 
 #about #text
@@ -326,9 +328,20 @@ nav
     width: 50%;
 }
 
+#about #text h1
+{
+    font-size: 40px;
+}
+
+#about #text p
+{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
 #about #container
 {
-    width: 270px;
+    width: 480px;
     height: 10px;
     background-color: rgb(137, 137, 137);
     border-radius: 25px;
@@ -337,12 +350,13 @@ nav
 #about #bar
 {
     height: 20px;
-    width: 300px;
-    border: #858585 1px solid;
+    width: 500px;
+    border: #969696 1px solid;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 #about .skill
@@ -353,39 +367,30 @@ nav
     background: linear-gradient(90deg, rgba(11,95,239,1) 0%, rgba(202,65,242,1) 100%);
 }
 
+#about h2
+{
+    font-size: 15px;
+    font-weight:normal;
+}
+
 #about .c_sharp
 {
-    width: 80%;
+    width: 70%;
 }
 
-#hobbies
+#about .javascript
 {
-    margin-left: 50px;
-    margin-right: 50px;
-    position: relative;
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap: 20%;
+    width: 50%;
 }
 
-#hobby
+#about .HTML
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 75%;
 }
 
-#hobby img
+#about .CSS
 {
-    width: 200px;
-}
-
-#hobby p
-{
-    font-family: 'Varela Round', sans-serif;
-    margin: 10px;
+    width: 50%;
 }
 
 #favourite 
@@ -407,10 +412,15 @@ nav
 #favourite #container .box
 {
     width: 250px;
-    background-color: #858585;
+    height: fit-content;
     position: absolute;
     transition: 0.3s;
     overflow: hidden;
+}
+
+#favourite #container .box:hover
+{
+    cursor: pointer;
 }
 
 #favourite #container .box-active
@@ -496,7 +506,7 @@ nav
     align-items: center;
     display: flex;
     gap: 40px;
-    height: 550px;
+    height: 600px;
 }
 
 .project
@@ -504,74 +514,75 @@ nav
     position: absolute;
     background: rgb(11,95,239);
     background: linear-gradient(90deg, rgba(11,95,239,1) 0%, rgba(202,65,242,1) 100%);
-    height: 300px;
-    width: 500px;
-    min-width: 600px;
+    height: auto;
+    width: 400px;
+    min-width: 440px;
     border-radius: 20px;
     opacity: 60%;
     transition: 0.3s;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px;
+}
+
+.project #icons
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project #icons img
+{
+    width: 40px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    border-radius: 0;
 }
 
 .project img 
 {
-    margin-top: 3%;
-    margin-left: 3%;
     margin-bottom: 3%;
-    width: 94%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.project-active h1
+.project h1
 {
-    margin: 3%;
+    
     font-family: 'Varela Round', sans-serif;
 }
 
-.project-active p
+.project p
 {
-    margin-left: 3%;
     font-family: 'Varela Round', sans-serif;
 }
 
 .project-active
 {
     height: auto;
-    width: 600px;
+    width: 400px;
+    min-width: 430px;
     opacity: 100%;
-}
-
-.project > #text{
-    display: none;
-}
-
-.project-active > #text{
-    display:inline;
 }
 
 .project #text
 {
-    height: 190px;
+    height: fit-content;
+    padding-bottom: 70px;
+    width: 100%;
     overflow-y: hidden;
-    transform-origin: top;
-    transform: scaleY(1);
-    animation-name: project_text_show;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
 }
 
-@keyframes project_text_show
-{
-    from {height: 0px;}
-    to {height: 190px;}
-}
 
 #projects #circles
 {
-    
+    margin-top: 10px;
     display:flex;
     justify-content: center;
     gap: 10px;
@@ -645,6 +656,7 @@ nav
     width: 350px;
     background: rgb(11,95,239);
     background: linear-gradient(90deg, rgba(11,95,239,1) 0%, rgba(202,65,242,1) 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #idol h1
@@ -799,11 +811,12 @@ footer #name
 
     #about
     {
-        margin-top: 300px;
+        padding-top: 300px;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 50px;
-        margin-right: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 100px;
         font-size: 5vw;
         gap: 40px;
     }
@@ -823,13 +836,13 @@ footer #name
     {
         margin-top: 10px;
         width: 100%;
-        height: 40px;
+        height: 25px;
     }
 
     #about #container
     {
         width: 93%;
-        height: 40%;
+        height: 50%;
     }
 
     #about .skill
@@ -860,6 +873,17 @@ footer #name
     {
         display: none;
     }
+
+    .project h1
+    {
+        font-size: 8vw;
+    }   
+
+    .project p
+    {
+        font-size: 4vw;
+    }
+
 }
 
 @media screen and (max-width: 600px)
@@ -889,6 +913,4 @@ footer #name
     {
         height: 500px;
     }
-
-    
 }

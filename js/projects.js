@@ -39,49 +39,6 @@ function Timer()
 	isPressd = false;
 }
 
-//* ------------------ favourite show and hide info ------------------
-
-function show_info(info)
-{
-    
-    let el = document.getElementById(info);
-
-    if(el.classList.contains("info-active") == false)
-    {
-        el.classList.remove("info-hide");
-        el.classList.add("info-active");
-    }
-}
-
-function hide_info(info)
-{
-    
-    let el = document.getElementById(info);
-    
-    if(el.classList.contains("info-hide") == false)
-    {
-        el.classList.remove("info-active");
-        el.classList.add("info-hide");
-    }
-}
-
-function toggle_info(info)
-{
-    let el = document.getElementById(info);
-
-    if(el.classList.contains("info-hide") == false)
-    {
-        el.classList.remove("info-active");
-        el.classList.add("info-hide");
-    }
-    else
-    {
-        el.classList.remove("info-hide");
-        el.classList.add("info-active");
-    }
-}
-
-
 //* ------------------ favourite element swiper ------------------
 
 let fv_count = 1;
@@ -173,7 +130,7 @@ window.addEventListener("touchend", function(e) //event for touch end (pro okno 
 })
 
 //* ------------------ project element swiper ------------------
-let pj_count = 1;
+let pj_count = 3;
 function dot_click_pj(num , type)
 {
 

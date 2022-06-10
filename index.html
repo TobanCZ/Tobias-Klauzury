@@ -70,7 +70,7 @@
             <p>Jmenuji se Tobiáš Ondra a jsem junior backend developer. Nyní studuji na Creative Hill College obor Vývoj Her a Multimediálních aplikací. Pracuji hlavně v programovacím jazyce C#. Rád zkouším programovat nové věci. Je mi 16 let a pocházím z Olomouce. Jsem absolvent prvního cyklu ve hře na housle. Mým oblíbeným předmětem ve škole je Matematika.</p>
         </div>
         <div id="skills">
-            <h2>C# 70%</h2>
+            <h2>C# 50%</h2>
             <div id="bar">
                 <div id="container">
                     <div class="skill c_sharp"></div>
@@ -101,6 +101,7 @@
     </div>
 
     <div id="favourite">
+        <h1>Oblíbené hry/filmy</h1>
         <div id="container">
             <div class="box" style="transform:translateX(-460%);" onclick="dot_click_fv(0,'click')">
                 <img src="images/oblibene/metroid_game.jpg" alt="game">
@@ -149,9 +150,14 @@
             <span class="dot_fv" onclick="dot_click_fv(7,'click')"></span>
             <span class="dot_fv" onclick="dot_click_fv(8,'click')"></span>
         </div>
+        <div id="buttons">
+            <button onclick="left_fv()"><span class="material-icons">arrow_back</span></button>
+            <button onclick="right_fv()"><span class="material-icons">arrow_forward</span></button>
+        </div>
     </div>
 
     <div id="projects">
+        <h1 id="title">Projekty</h1>
         <div id="container">
             <div class="project" style="transform:translateX(-330%) ;" onclick="dot_click_pj(0,'click')">
                 <img src="projects/mandel_brot_set_image.png" alt="">
@@ -229,7 +235,7 @@
                 <img src="projects/history_of_meme_image.png" alt="">
                 <div id="text">
                     <h1>History of Memes</h1>
-                    <p>Interaktivní historie internetových memů. Stránka vznikla v rámci projektu kde jsme měly vytvořit libovolnou práci na téma paměť.</p>
+                    <p>Interaktivní historie internetových memů. Stránka vznikla v rámci projektu, kde jsme měli vytvořit libovolnou práci na téma paměť.</p>
                     <div id=icons>
                         <a href="https://tobancz.github.io/History-of-meme/" target="_blank"><img src="images/icons/web_icon.png" alt=""></a>
                         <a href="https://github.com/TobanCZ/History-of-meme" target="_blank"><img src="images/icons/github_icon.png" alt=""></a>
@@ -247,15 +253,18 @@
             <span class="dot_pj" onclick="dot_click_pj(6,'click')"></span>
         </div>
         <div id="buttons">
-            <button onclick="left()"><span class="material-icons">arrow_back</span></button>
-            <button onclick="right()"><span class="material-icons">arrow_forward</span></button>
+            <button onclick="left_pj()"><span class="material-icons">arrow_back</span></button>
+            <button onclick="right_pj()"><span class="material-icons">arrow_forward</span></button>
         </div>
     </div>
 
     <div id="idols">
-        <div id="idol"><img src="images/idolove/christopher_nolan.jpg" alt=""><h1>Christopher Nolan</h1><p>Režisér filmů Tenet, Interstellar,...</p></div>
-        <div id="idol"><img src="images/idolove/toby_fox.jpg" alt=""><h1>Toby Fox</h1><p>Autor hry Undertale.</p></div>
-        <div id="idol"><img src="images/idolove/hideo_kojima.jpg" alt=""><h1>Hideo Kojima</h1><p>Ředitel Kojima Productions.</p></div>
+        <h1 id="title">Idolové</h1>
+        <div id="container">
+            <div id="idol"><img src="images/idolove/christopher_nolan.jpg" alt=""><h1>Christopher Nolan</h1><p>Režisér filmů Tenet, Interstellar,...</p></div>
+            <div id="idol"><img src="images/idolove/toby_fox.jpg" alt=""><h1>Toby Fox</h1><p>Autor hry Undertale.</p></div>
+            <div id="idol"><img src="images/idolove/hideo_kojima.jpg" alt=""><h1>Hideo Kojima</h1><p>Ředitel Kojima Productions (autor hry Death Stranding).</p></div>
+        </div>
     </div>
 
     <footer>
@@ -269,7 +278,7 @@
             <a href="https://www.instagram.com/tobi_ondra/" target="_blank"><img src="images/icons/instagram_icon.png" alt=""></a>
             <a href="https://steamcommunity.com/profiles/76561198283610034/" target="_blank"><img src="images/icons/steam_icon.png" alt=""></a>
         </div>
-        <p>Created by Tobiáš Ondra 2022 ©</p>
+        <p>Created by Tobiáš Ondra ©2022</p>
     </footer>
     <script src="js/projects.js"></script>
 </body>

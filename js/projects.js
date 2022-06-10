@@ -41,7 +41,7 @@ function Timer()
 
 //* ------------------ favourite element swiper ------------------
 
-let fv_count = 1;
+let fv_count = 4;
 
 function dot_click_fv(num,type)
 {
@@ -98,6 +98,27 @@ function dot_click_fv(num,type)
         }
     }
 }
+
+function left_fv()
+    {
+        if(fv_count > 0)
+        {
+            fv_count -= 1;
+                dot_click_fv(fv_count,"click");
+        }
+    }
+
+    function right_fv()
+    {
+        const favourite = document.querySelector('#favourite'); //get el
+        const fv = favourite.querySelector('#container'); //get child of el
+
+        if(fv_count < fv.childElementCount-1)
+        {
+            fv_count += 1;
+            dot_click_fv(fv_count,"click");
+        }
+    }
 
 //* ------------------ touch swipe for mobile(favourite) ------------------
 let fv_startX = 0;
@@ -188,7 +209,7 @@ function dot_click_pj(num , type)
     }
 }
 
-function left()
+function left_pj()
 {
     if(pj_count > 0)
     {
@@ -197,7 +218,7 @@ function left()
     }
 }
 
-function right()
+function right_pj()
 {
     const projects = document.querySelector('#projects'); //get el
     const pj = projects.querySelector('#container'); //get child of el

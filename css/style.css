@@ -228,7 +228,6 @@ nav
     margin-top: 150px;
     max-width: 700px;
     min-width: 65%;
-    height: 500px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -244,8 +243,9 @@ nav
 {
     border: #c6c6c6 solid 2px;
     border-radius: 20px;
-    max-width: 400px;
-    max-height: 400px;
+    width: 400px;
+    min-width: 400px;
+    height: 400px;
     margin: 20px;
 }
 

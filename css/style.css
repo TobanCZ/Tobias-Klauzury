@@ -802,7 +802,7 @@ footer #name
     {
         width: 90%;
         min-width: 50%;
-        min-height: auto;
+        height: auto;
         max-width: 400px;
         border-radius: 10px;
     }

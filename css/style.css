@@ -923,6 +923,21 @@ footer #name
     {
         height: 700px;
     }
+
+    #favourite h1
+    {
+        font-size: 10vw;
+    }
+
+    #projects #title 
+    {
+        font-size: 10vw;
+    }
+
+    #idols #title
+    {
+        font-size: 10vw;
+    }
 }
 
 @media screen and (max-width: 400px)
